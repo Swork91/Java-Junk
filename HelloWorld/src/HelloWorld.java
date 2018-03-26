@@ -21,7 +21,8 @@ public class HelloWorld {
 		System.out.println("See the cup contents by entering the password: ");
 		String passwd = scan.nextLine();
 		System.out.println("you see the cup has: "+cupa.getContents(passwd));
-
+		scan.close();
+		
 		Cup cupb = new Cup(false, 0, "red", "oil"); //probably should only use this to create cups otherwise weird shit will happen.
 		cupb.description();
 		
@@ -29,9 +30,5 @@ public class HelloWorld {
 		tanka.description();
 		tanka.sip(100);
 		cupa.sip(50);
-		System.out.println(product(25, 5));
-	}
-	static int product (int a, int b) {
-		return a*b;
 	}
 }
