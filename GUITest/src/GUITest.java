@@ -5,36 +5,36 @@ import java.awt.*;
 public class GUITest extends JFrame{
 	
 	public GUITest(String str) {
-		this.setTitle(str);
 		
-		JPanel inputFields = new JPanel(); //create panel
-		inputFields.setLayout(new GridLayout(0,2,20,20)); // set panel layout
-		
-		inputFields.add(new JLabel("First name:")); //add panel stuff
-		inputFields.add(new JTextField());
-		inputFields.add(new JLabel("Middle Initial:"));
-		inputFields.add(new JTextField());
-		inputFields.add(new JLabel("Last name:"));
-		inputFields.add(new JTextField());
-		
-		add(inputFields, BorderLayout.NORTH); //add panel to frame
 	}
 
 	public static void main(String[] args) {
-		GUITest frameWithComponents = new GUITest("Welcome to Facebook!");
-		
-		JButton okay = new JButton("facebook");
-		Color red = new Color(50,0,0);
-		Color facebookBlue = new Color(59,89,152);
-		Font fbFont = new Font("Lucida Grande", Font.BOLD, 64);
-		okay.setBackground(facebookBlue);
-		okay.setForeground(Color.WHITE);
-		okay.setFont(fbFont);
-		frameWithComponents.add(okay, BorderLayout.CENTER);
-		frameWithComponents.setSize(600, 300);
-		frameWithComponents.setLocationRelativeTo(null);
-		frameWithComponents.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameWithComponents.setVisible(true);
+		testOne();
+	}
+	
+	public static void testOne() {
+		JFrame one = new JFrame("Problem 12_1");
+		one.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5)); 
+		JPanel p1 = new JPanel();
+		JPanel p2 = new JPanel();
+		one.add(p1);
+		one.add(p2);
+		JButton button1 = new JButton("Button 1");
+		JButton button2 = new JButton("Button 2");
+		JButton button3 = new JButton("Button 3");
+		JButton button4 = new JButton("Button 4");
+		JButton button5 = new JButton("Button 5");
+		JButton button6 = new JButton("Button 6");
+		p1.add(button1);
+		p1.add(button2);
+		p1.add(button3);
+		p2.add(button4);
+		p2.add(button5);
+		p2.add(button6);
+		one.setSize(560, 100);
+		one.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		one.setVisible(true);
+
 	}
 
 }
